@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#09225A;
+    color: #fff;
+    padding: 10px;
+}
+.navbar1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#ffffff;
+    color: #09225A;
+    padding: 10px;
+}
+.vertical-line {
+    height: 15px;
+    width: 0.1px;
+    background-color: #fff;
+    margin: 0 10px; 
+}
+
+
+.contact-details {
+    display: flex;
+    margin-left: 60px;
+}
+.contact-details :hover{
+    color:#4d4a4a;
+}
+
+.contact-item {
+    margin-right: 20px;
+}
+
+.social-icons {
+    display: flex;
+    margin-right: 40px;
+}
+
+.icon-link {
+    display: inline-block;
+    margin-left: 10px;
+    color: #fff;
+}
+.icon-link :hover{
+    color: #F5F6FA;
+}
+
+/* Style the icons */
+.icon-link img {
+    width: 25px;
+    height: 25px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+
+.logo img {
+    height: 40px; 
+    margin-left: 80px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.menu li {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+
+}
+.menu li :hover{
+    color:#f1f1f1;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #09225A;
+    font-weight: bold;
+    font-size: 16px;
+}
+.menu li a.active {
+    background-color: #09225A; 
+    color: #fff; 
+    padding: 10px;
+    border-radius: 6px;
+}
+.background-image {
+    background-image: url('Img/Layer_2.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 520px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+.inner-container {
+    position: relative;
+  }
+  
+  .title {
+    color: #4d4a4a;
+    font-weight: bold;
+    margin-top: 10px; /* Adjust the gap from the top as needed */
+  }
+  
+
+.background-image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    background-image: url('Img/Rectangle_5_copy.png'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9; 
+}
+.center-image {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('Img/Device_Mockup.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 350px; 
+    height: 300px;
+    z-index: 1;
+}
+
+
+
+  
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 20px;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .image-text {
+    position: absolute;
+    top: 6%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    color: #09225A;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    
+  }
+  .text{
+    font-size: 16px;
+    color: #4d4a4a;
+    text-justify: auto;
+  }
+  
+  .column img {
+    max-width: 100%;
+    height: auto;
+  }
+  .overlay-image {
+    position: absolute;
+     width: 20px;
+    height: auto;
+    left: 12px;
+    top:10px;
+    z-index: 1;
+  }
+.service-section {
+    background-color: #f1f1f1; 
+    padding: 20px;
+    text-align: center;
+}
+
+.service-section h2 {
+    margin-bottom: 10px;
+    color: #09225A;
+    font-weight: bold;
+    font-size: 30px;
+}
+.service-section h3 {
+    margin-bottom: 10px;
+    color: #09225A;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.service-section p {
+    margin: 0;
+    font-size: 15px;
+    color: #09225A;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.service{
+    width:330px;
+    height: 586px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    
+}
+.Boxcontainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .left-content,
+  .right-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+ .success-stories {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .success-story img {
+    max-width: 15px; /* Adjust the image size as needed */
+    margin-right: 20px; /* Add spacing between the image and content */
+  }
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+  }
+  .slider-container h2 {
+   
+    margin-bottom: 10px;
+    color: #09225A;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  
+  .slider {
+    display: flex;
+    transition: all 0.3s ease;
+  }
+  
+  .slide {
+    padding: 0 20px;
+    text-align: center;
+    color: #09225A;
+  }
+  
+  .slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  
+  
+  
+
+.download-app {
+    background-image: url('Img/Rectangle_25.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .download-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .download-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .download-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  
+  
+  .download-button img {
+    max-width: 200px; 
+  }
+  
+  .download-button {
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+  
+  
+  .download-button:hover {
+    opacity: 0.8;
+    
+  }
+ 
+  .footer {
+    background-color: #F5F6FA;
+    color: #09225A;
+    padding: 40px 20px; 
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-column {
+    flex: 1;
+  }
+  
+  .footer h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align:center ;
+  }
+  
+  .footer p {
+    font-size: 12px; 
+    text-align: center; 
+    color: #4d4a4a;
+  }
+  .social-icons1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon-link1 {
+    display: inline-block;
+    margin: 0 10px; 
+    font-size: 24px;
+    color: #4d4a4a; 
+    text-decoration: none;
+  }
+  
+
+  .icon-link1 i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .social-icons1 {
+    margin-top: 20px;
+  }
+  
+  

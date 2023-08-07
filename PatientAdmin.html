@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients Admin Portal</title>
+    <link rel="stylesheet" href="PatientAdmin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .btn-custom-color {
+          background-color: #663497; 
+          border-color: #663497; 
+          color: #FFFFFF;
+          border-radius: 10px;
+          padding: 10px, 35px;
+          font-size: 15px;
+        }
+        </style>
+</head>
+<body>
+    <nav class="navbar">
+        
+        <div class="logo-box">
+            <h5 class="logo">Patient System</h5>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="right-side-icons">
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-user"></i>
+        </div>
+         </nav>
+         
+         <div class="left-side-navigation">
+            <ul>
+                <img src="Img/AdminPic.png" height="80px" width="100px" alt="Dashboard"/>
+                <div class="name">John Doe</div>
+
+                
+            </ul>
+        </div>
+        <div class="page-name-section">
+            <h6>Patient Dashboard</h6>
+        </div>
+        <div class="content">
+           
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="bg-white border p-2">
+                            <h5>Patient Details</h5>
+                            <hr>
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                <label for="firstname">First Name</label>
+                                <input type="text" class="form-control" id="firstname" required>
+                            </div>
+                            <div class="form-group  col-md-4">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" class="form-control" id="lastname"  required>
+                            </div>
+                            <div class="form-group  col-md-4">
+                                <label for="phone">Phone</label>
+                                <input type="tel" class="form-control" id="phone"  required>
+                            </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                <label for="firstname">Email</label>
+                                <input type="text" class="form-control" id="Email" required>
+                            </div>
+                            <div class="form-group  col-md-4">
+                                <label for="lastname">Address Line1</label>
+                                <input type="text" class="form-control" id="Address1"  required>
+                            </div>
+                            <div class="form-group  col-md-4">
+                                <label for="phone">Address Line2</label>
+                                <input type="tel" class="form-control" id="Address2"  required>
+                            </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                <label for="firstname">City</label>
+                                <input type="text" class="form-control" id="City" required>
+                            </div>
+                            <div class="form-group  col-md-4">
+                                <label for="lastname">State</label>
+                                <input type="text" class="form-control" id="State"  required>
+                            </div>
+                            <div class="form-group  col-md-4">
+                                <label for="phone">Zipcode</label>
+                                <input type="tel" class="form-control" id="Zipcode"  required>
+                            </div>
+                            </div>
+                            <button type="submit" class="btn btn-custom-color">ADD</button>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-white border p-3">
+                            <h5>Patient List</h5>
+                            <span>
+                                <div class="form-group ">
+                                    <input type="text" class="form-control" placeholder="Search by First Name">
+                                </div></span>
+                            
+                            <hr>
+                            
+                              <div class="container mt-4">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th>Firstname</th>
+                                      <th>Lastname</th>
+                                      <th>Address</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>John</td>
+                                      <td>Doe</td>
+                                      <td>123 Main St</td>
+                                      <td>
+                                        <a href="#" class="btn btn-primary" title="Edit"><i class="fas fa-edit"></i></a>
+                                        <a href="#" class="btn btn-danger" title="Delete"><i class="fas fa-trash"></i></a>
+                                        <a href="#" class="btn btn-info" title="View"><i class="fas fa-eye"></i></a>
+                                      </td>
+                                    </tr>
+                                   
+                                    
+                                  </tbody>
+                                </table>
+                              </div>
+                            
+                             
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>
