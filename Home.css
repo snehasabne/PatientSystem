@@ -239,12 +239,17 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+    
   }
   
   .left-content,
   .right-content {
     flex: 1;
-    padding: 20px;
+    padding: 10px;
+    margin-left: 10px;
+  }
+  .serviceImg img{
+    margin-top: 193px;
   }
   
  .success-stories {
@@ -256,41 +261,53 @@ body {
     max-width: 15px; /* Adjust the image size as needed */
     margin-right: 20px; /* Add spacing between the image and content */
   }
-  .slider-container {
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-  }
-  .slider-container h2 {
-   
-    margin-bottom: 10px;
-    color: #09225A;
-    font-weight: bold;
-    text-align: center;
-    font-size: 30px;
-  }
+ /* Add this CSS to align the quote image inline with the content in the slide */
 
+ 
+
+.success-stories {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.success-story img {
+  max-width: 15px; /* Adjust the image size as needed */
+  margin-right: 20px; /* Add spacing between the image and content */
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+.slider-container h2 {
+ 
+  margin-bottom: 10px;
+  color: #09225A;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.slider {
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.slide {
+  padding: 0 20px;
+  text-align: center;
+  color: #09225A;
+}
+
+.slide img {
   
-  .slider {
-    display: flex;
-    transition: all 0.3s ease;
-  }
-  
-  .slide {
-    padding: 0 20px;
-    text-align: center;
-    color: #09225A;
-  }
-  
-  .slide img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  
-  
-  
-  
+  display: inline-block;
+  display: flex;
+}
+
+
+
 
 .download-app {
     background-image: url('Img/Rectangle_25.png');
@@ -384,4 +401,27 @@ body {
     margin-top: 20px;
   }
   
-  
+
+/* Media queries for responsiveness */
+
+/* Mobile (up to 767px) */
+@media screen and (max-width: 767px) {
+ 
+  .logo img {
+      margin-left: 20px; 
+  }
+  .menu {
+      display: none; 
+  }
+ 
+}
+
+/* Tablet (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+ 
+}
+
+/* Larger screens (992px and above) */
+@media screen and (min-width: 992px) {
+ 
+}

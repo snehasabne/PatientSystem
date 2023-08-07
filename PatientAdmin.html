@@ -1,152 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patients Admin Portal</title>
-    <link rel="stylesheet" href="PatientAdmin.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        .btn-custom-color {
-          background-color: #663497; 
-          border-color: #663497; 
-          color: #FFFFFF;
-          border-radius: 10px;
-          padding: 10px, 35px;
-          font-size: 15px;
-        }
-        </style>
+<link rel="stylesheet" href="PatientAdmin.css">
+<style>
+    .btn-custom-color {
+      background-color: #663497; 
+      border-color: #663497; 
+      color: #FFFFFF;
+      border-radius: 10px;
+      padding: 10px, 35px;
+      font-size: 15px;
+    }
+    .custom-label {
+    color:  #132e68;
+}
+.gray-bg {
+    background-color: #f2f2f2;
+}
+.custom-table-style {
+    border-collapse: collapse;
+}
+.custom-table-style th,
+.custom-table-style td {
+    border: none;
+}
+.rounded {
+    border-radius: 20px; /* Adjust the value to control the border radius */
+}
+    </style>
 </head>
 <body>
-    <nav class="navbar">
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo-box">
+        <h5 class="logo">Patient System</h5>
+    </div>
+    <a class="hamburger" onclick="toggleNav()">&#9776;</a>
+    <div class="right-side-icons">
+        <a href="#inbox"><i class="fas fa-envelope"></i></a>
+        <a href="#notifications"><i class="fas fa-bell"></i></a>
+        <a href="#user-profile"><i class="fas fa-user"></i></a>
+    </div>
+    
+  
+ 
+</div>
+
+<!-- Left-side menu bar -->
+<div id="mySidebar" class="left-sidebar">
+    <ul>
+        <img src="Img/AdminPic.png" height="80px" width="100px" alt="Dashboard"/>
+        <div class="name">John Doe</div>
+        <div class="Btn1">
+            
+            <h6>Patient</h6>
         
-        <div class="logo-box">
-            <h5 class="logo">Patient System</h5>
         </div>
-        <div class="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="right-side-icons">
-            <i class="fas fa-envelope"></i>
-            <i class="fas fa-bell"></i>
-            <i class="fas fa-user"></i>
-        </div>
-         </nav>
-         
-         <div class="left-side-navigation">
-            <ul>
-                <img src="Img/AdminPic.png" height="80px" width="100px" alt="Dashboard"/>
-                <div class="name">John Doe</div>
+       
 
-                
-            </ul>
-        </div>
-        <div class="page-name-section">
-            <h6>Patient Dashboard</h6>
-        </div>
-        <div class="content">
+        
+    </ul>
+</div>
+
+<!-- Right-side section -->
+<div class="right-section">
+    <div class="page-name-section">
+        <h4>Patient Dashboard</h4>
+    </div>
+    <div class="content">
            
-            <div class="container">
-                <div class="row mt-3">
-                    <div class="col-md-6">
-                        <div class="bg-white border p-2">
-                            <h5>Patient Details</h5>
-                            <hr>
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                <label for="firstname">First Name</label>
-                                <input type="text" class="form-control" id="firstname" required>
-                            </div>
-                            <div class="form-group  col-md-4">
-                                <label for="lastname">Last Name</label>
-                                <input type="text" class="form-control" id="lastname"  required>
-                            </div>
-                            <div class="form-group  col-md-4">
-                                <label for="phone">Phone</label>
-                                <input type="tel" class="form-control" id="phone"  required>
-                            </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                <label for="firstname">Email</label>
-                                <input type="text" class="form-control" id="Email" required>
-                            </div>
-                            <div class="form-group  col-md-4">
-                                <label for="lastname">Address Line1</label>
-                                <input type="text" class="form-control" id="Address1"  required>
-                            </div>
-                            <div class="form-group  col-md-4">
-                                <label for="phone">Address Line2</label>
-                                <input type="tel" class="form-control" id="Address2"  required>
-                            </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                <label for="firstname">City</label>
-                                <input type="text" class="form-control" id="City" required>
-                            </div>
-                            <div class="form-group  col-md-4">
-                                <label for="lastname">State</label>
-                                <input type="text" class="form-control" id="State"  required>
-                            </div>
-                            <div class="form-group  col-md-4">
-                                <label for="phone">Zipcode</label>
-                                <input type="tel" class="form-control" id="Zipcode"  required>
-                            </div>
-                            </div>
-                            <button type="submit" class="btn btn-custom-color">ADD</button>
-                        </form>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="d-flex flex-column h-100">
+                    <div class="bg-white border p-2 rounded">
+                        <h5>Patient Details</h5>
+                        <hr>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                            <label class="custom-label" for="firstname">First Name</label>
+                            <input type="text" class="form-control" id="firstname" required>
                         </div>
+                        <div class="form-group  col-md-4">
+                            <label  class="custom-label"for="lastname">Last Name</label>
+                            <input type="text" class="form-control" id="lastname"  required>
+                        </div>
+                        <div class="form-group  col-md-4">
+                            <label  class="custom-label"for="phone">Phone</label>
+                            <input type="tel" class="form-control" id="phone"  required>
+                        </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                            <label  class="custom-label"for="firstname">Email</label>
+                            <input type="text" class="form-control" id="Email" required>
+                        </div>
+                        <div class="form-group  col-md-4">
+                            <label  class="custom-label" for="lastname">Address Line1</label>
+                            <input type="text" class="form-control" id="Address1"  required>
+                        </div>
+                        <div class="form-group  col-md-4">
+                            <label  class="custom-label"for="phone">Address Line2</label>
+                            <input type="tel" class="form-control" id="Address2"  required>
+                        </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                            <label  class="custom-label"for="firstname">City</label>
+                            <input type="text" class="form-control" id="City" required>
+                        </div>
+                        <div class="form-group  col-md-4">
+                            <label  class="custom-label" for="lastname">State</label>
+                            <input type="text" class="form-control" id="State"  required>
+                        </div>
+                        <div class="form-group  col-md-4">
+                            <label class="custom-label" for="phone">Zipcode</label>
+                            <input type="tel" class="form-control" id="Zipcode"  required>
+                        </div>
+                        </div>
+                        <button type="submit" class="btn btn-custom-color">ADD</button>
+                    </form>
                     </div>
-                    <div class="col-md-6">
-                        <div class="bg-white border p-3">
-                            <h5>Patient List</h5>
-                            <span>
-                                <div class="form-group ">
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex flex-column h-100">
+                    <div class="bg-white border p-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Patient List</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-0">
                                     <input type="text" class="form-control" placeholder="Search by First Name">
-                                </div></span>
-                            
-                            <hr>
-                            
-                              <div class="container mt-4">
-                                <table class="table table-bordered">
-                                  <thead>
-                                    <tr>
-                                      <th>Firstname</th>
-                                      <th>Lastname</th>
-                                      <th>Address</th>
-                                      <th>Action</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <td>John</td>
-                                      <td>Doe</td>
-                                      <td>123 Main St</td>
-                                      <td>
-                                        <a href="#" class="btn btn-primary" title="Edit"><i class="fas fa-edit"></i></a>
-                                        <a href="#" class="btn btn-danger" title="Delete"><i class="fas fa-trash"></i></a>
-                                        <a href="#" class="btn btn-info" title="View"><i class="fas fa-eye"></i></a>
-                                      </td>
-                                    </tr>
-                                   
-                                    
-                                  </tbody>
-                                </table>
-                              </div>
-                            
-                             
-                            
+                                </div>
+                            </div>
                         </div>
+                        
+                        <hr class="my-1">
+                        
+                          <div class="container mt-4">
+                            <table class="table table-bordered custom-table-style">
+                              <thead >
+                                <tr>
+                                  <th class="gray-bg">Firstname</th>
+                                  <th class="gray-bg">Lastname</th>
+                                  <th class="gray-bg">Address</th>
+                                  <th class="gray-bg">Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>John</td>
+                                  <td>Doe</td>
+                                  <td>123 Main St</td>
+                                  <td>
+                                    
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>123 Main St</td>
+                                    <td>
+                                      
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>123 Main St</td>
+                                    <td>
+                                      
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>123 Main St</td>
+                                    <td>
+                                      
+                                    </td>
+                                  </tr>
+                               
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                        
+                         </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
-    
+    </div>
+
+</div>
+
+<script>
+function toggleNav() {
+  var sidebar = document.getElementById("mySidebar");
+  var rightSection = document.getElementsByClassName("right-section")[0];
+  if (sidebar.style.width === "250px") {
+    sidebar.style.width = "0";
+    rightSection.style.marginLeft = "0";
+  } else {
+    sidebar.style.width = "250px";
+    rightSection.style.marginLeft = "250px";
+  }
+}
+</script>
+
 </body>
 </html>
